@@ -29,11 +29,11 @@ public class CreateAccountTest extends Base  {
 	}
 	@Test(dataProvider = "userData")
 	public void Create(String firstName, String lastName, String email, String password, String confirmPassword) throws Exception {
-		waits.implicit();
+		waits.implicit(10);
 		home.getLogin().click();
-		waits.explicit(lp.getSignUpLink());
+		waits.explicit(lp.getSignUpLink(), 10);
 		lp.getSignUpLink().click();
-		waits.explicit(caa.getFirstName());
+		waits.explicit(caa.getFirstName(), 10);
 		caa.getFirstName().sendKeys(firstName);
 		caa.getLastName().sendKeys(lastName);
 		caa.getEmail().sendKeys(email);

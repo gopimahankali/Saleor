@@ -74,8 +74,11 @@ public class Base {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() {
-		
+	public void beforeMethod() throws Exception {
+		home.getLogin().click();
+		lp.getEmail().sendKeys(file.read("valid.username"));
+		lp.getPassword().sendKeys(file.read("valid.password"));
+		lp.getLogin().click();
 
 	}
 
