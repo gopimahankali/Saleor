@@ -25,9 +25,35 @@ public class Home {
 	WebElement accessories;
 	@FindBy(xpath = "//a[text()='Groceries']")
 	WebElement groceries;
-	@FindBy(xpath = "//span[text()='Log in']")
+	@FindBy(xpath = "//a[contains(@class,'inline-flex h-10 w-10')]")
 	WebElement login;
 	@FindBy(xpath = "//button[@data-testid='CartNavItem']")
 	WebElement cart;
+
+	
+	public WebElement getHomePage() {
+		return homePage;
+	}
+	public WebElement getSearch() {
+		return search;
+	}
+	public WebElement getAll() {
+		return all;
+	}
+	public WebElement getApparel() {
+		return apparel;
+	}
+	public WebElement getAccessories() {
+		return accessories;
+	}
+	public WebElement getGroceries() {
+		return groceries;
+	}
+	public WebElement getLogin() {
+		return login;
+	}
+	public WebElement getCart() {
+		return cart;
+	}
 
 }

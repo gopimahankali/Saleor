@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Create_an_Account {
+	
+	
 	WebDriver driver;
 
 	public Create_an_Account(WebDriver driver) {
@@ -14,7 +16,7 @@ public class Create_an_Account {
 	}
 
 	@FindBy(xpath = "//a[text()='Sign in']")
-	WebElement sinInLink;
+	WebElement signInLink;
 	@FindBy(id = "firstName")
 	WebElement firstName;
 	@FindBy(id = "lastName")
@@ -26,5 +28,29 @@ public class Create_an_Account {
 	@FindBy(id = "confirmPassword")
 	WebElement confirmPassword;
 	@FindBy(xpath = "//button[text()='Create Account']")
-	WebElement login;
+	WebElement createAccount;
+
+
+	public WebElement getSignInLink() {
+		return signInLink;
+	}
+	public WebElement getFirstName() {
+		return firstName;
+	}
+	public WebElement getLastName() {
+		return lastName;
+	}
+	public WebElement getEmail() {
+		return email;
+	}
+	public WebElement getPassword() {
+		return password;
+	}
+	public WebElement getConfirmPassword() {
+		return confirmPassword;
+	}
+	public WebElement getCreateAccount() {
+		return createAccount;
+	}
+	
 }

@@ -23,12 +23,26 @@ public class loginPage {
 	}
 
 	@FindBy(xpath = "//a[text()='Sign up']")
-	WebElement sinUpLink;
+	WebElement signUpLink;
 	@FindBy(id = "email")
 	WebElement email;
 	@FindBy(id = "password")
 	WebElement password;
 	@FindBy(xpath = "//button[text()='Sign In']")
 	WebElement login;
+
+	
+	public WebElement getSignUpLink() {
+		return signUpLink;
+	}
+	public WebElement getEmail() {
+		return email;
+	}
+	public WebElement getPassword() {
+		return password;
+	}
+	public WebElement getLogin() {
+		return login;
+	}
 
 }
