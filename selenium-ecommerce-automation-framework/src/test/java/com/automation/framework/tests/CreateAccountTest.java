@@ -30,6 +30,9 @@ public class CreateAccountTest extends Base  {
 	@Test(dataProvider = "userData")
 	public void Create(String firstName, String lastName, String email, String password, String confirmPassword) throws Exception {
 		waits.implicit();
+		home.getLogin().click();
+		waits.explicit(lp.getSignUpLink());
+		lp.getSignUpLink().click();
 		waits.explicit(caa.getFirstName());
 		caa.getFirstName().sendKeys(firstName);
 		caa.getLastName().sendKeys(lastName);
@@ -37,6 +40,8 @@ public class CreateAccountTest extends Base  {
 		caa.getPassword().sendKeys(password);
 		caa.getConfirmPassword().sendKeys(confirmPassword);
 		caa.getCreateAccount().click();
+		UtilityClassObject.getDriver().navigate().refresh();
+		home.getHomePage().click();
 	}
 
 }

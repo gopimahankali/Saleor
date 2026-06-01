@@ -52,8 +52,8 @@ public class Base {
 
 			options.setExperimentalOption("prefs", map);
 
-			options.addArguments("--force-device-scale-factor=0.9");
-			options.addArguments("--high-dpi-support=0.9");
+			options.addArguments("--force-device-scale-factor=1.0");
+			options.addArguments("--high-dpi-support=1.0");
 
 			driver = new ChromeDriver(options);
 
@@ -75,16 +75,13 @@ public class Base {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		home.getLogin().click();
-		waits.explicit(lp.getSignUpLink());
-		lp.getSignUpLink().click();
+		
 
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		UtilityClassObject.getDriver().navigate().refresh();
-		home.getHomePage().click();
+		
 	
 	}
 
